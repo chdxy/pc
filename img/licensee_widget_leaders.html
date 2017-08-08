@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://china.nba.com/articles/licensee_widget_leaders.html -->
+<html xmlns:ng="http://angularjs.org" lang="en" class=" js svg inlinesvg svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+     <!-- Font face import -->
+    <link href="./fontface(1).css" rel="stylesheet">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title></title>
+    <link href="./libs.min(1).css" rel="stylesheet">
+    <link href="./custom.min(1).css" rel="stylesheet">
+	  <!--SSI /frags/licensee_scripts_header.html -->
+	  <!-- start licensee_widget_scripts_header  -->
+
+
+<!-- end licensee_widget_scripts_header  --><!--[if !IE]>|xGv00|7b93ab1228e4222502f06a0e3c1644db<![endif]-->
+	
+    <!--[if IE]>
+      <link href="/styles/libs/font-awesome-ie7.min.css" rel="stylesheet">
+      
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      
+      <script src="/scripts/libs/es5-shim.min.js"></script>
+      <script src="/scripts/libs/es5-sham.min.js"></script>
+
+      <script>
+        document.createElement('sib-bar-chart');
+        document.createElement('sib-bar');
+        document.createElement('sib-fallback-src');
+        document.createElement('sib-hotzone-chart');
+        document.createElement('sib-img-player');
+        document.createElement('sib-img-team');
+        document.createElement('sib-playoff-scoreboard-slider');
+        document.createElement('sib-scoreboard-date');
+        document.createElement('sib-scoreboard-slider');
+        document.createElement('sib-social-icons');
+        document.createElement('sib-calendar');
+        document.createElement('sib-scores-calendar');
+        document.createElement('sib-team-twitter');
+        document.createElement('sib-playoff-bracket');
+        document.createElement('ng-pluralize');
+      </script>
+      <style>
+        .sib-table-container select {
+          background-image: none !important;
+        }
+        #player-index-search-label {
+          display: inline !important;
+        }
+        .sib-scoreboard .scoreboard .page .game .teams:hover .overlay{ display:block; }
+      </style>
+    <![endif]-->
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {  display: none !important; }
+      .wf-loading { border-top: 0px solid #ffffff; }      
+    </style>  
+  </head>
+  <body data-ng-app="sib" id="ng:app" class="ng-app:sib ng-scope" style="">
+    <div data-ng-show="loading &amp;&amp; !errors.length" class="preloader ng-hide">
+        <img src="./loader(1).gif"><br>
+    </div>
+    <div id="app-container" class="" data-ng-hide="loading">
+      <div class="widget-container-outer" id="widget-container-outer">
+
+        <!-- Start widget-content -->
+         <!--SSI /widget/include/leaders/index.html -->
+    <div class="widget-container ng-isolate-scope" sib-iframe-notice="">
+  
+  <div class="" data-ng-hide="loading">
+    <!-- Start Widget -->
+    <div id="widget-leaders">
+  
+  <!-- league leading players V2 -->
+<div class="sib-list-league-leaders-v2 ng-scope" data-ng-controller="LeagueLeadersV2Ctrl">
+
+	<!-- DESKTOP LEADERS -->
+	<!-- ngIf: !mobile --><div class="desktop-leaders ng-scope" data-ng-if="!mobile">
+
+	  <!--DESKTOP LEADER HEADER -->
+	  <div class="list-header">
+		<!--LEADER HEADER TITLE-->
+	    <div class="list-header__title">
+	    	<div class="list-header__title--logo"></div>
+	   		<div class="list-header__title--name" data-ng-i18next="leagueLeaders.shortTitle">数据王</div>
+	   	</div>
+		<!-- END: LEADER HEADER TITLE-->
+
+		  <!--LEADER HEADER TAB-->
+	    <div class="list-header__tab">
+	      <span class="season-type ng-binding active" data-ng-class="{&#39;active&#39;:tabbed==&#39;last&#39;}" data-ng-click="tabbed=&#39;last&#39;">每日数据王</span>
+	      <span class="season-type ng-binding" data-ng-class="{&#39;active&#39;:tabbed==&#39;season&#39;}" data-ng-click="tabbed=&#39;season&#39;">赛季数据王</span>
+	    </div>
+		  <!-- END: LEADER HEADER TAB-->
+
+		  <!--LEADER HEADER FOOTER-->
+	    <div class="list-header__footer">
+	    <a data-ng-href="/statistics/#!" target="_parent" href="http://china.nba.com/statistics/#!"><span data-ng-i18next="leagueLeadingTeams.seeAllPlayerStats">更多</span></a>
+	  	</div>
+		  <!-- END: LEADER HEADER FOOTER-->
+
+
+	  </div>
+      <!-- DESKTOP LEADER CONTENT -->
+	  <div class="col-12 list-groups">
+  		<div class="desktop-leaderboard">
+  	    <sib4-leader-desktop-directive leadertype="tabbed" class="ng-isolate-scope"><scroll-listener item-width="220" watch-var="allLeaders.length" breakpoint="768" class="ng-isolate-scope"><a href="http://china.nba.com/articles/licensee_widget_leaders.html" class="arrow-button arrow-button__left empty" ng-class="{ empty: scrollLeft===0, full: scrollLeft&gt;0 }" ng-click="navPrev($event)"> <span><i class="icon-angle-left" aria-hidden="true"></i></span></a><a href="http://china.nba.com/articles/licensee_widget_leaders.html" class="arrow-button arrow-button__right empty" ng-class="{ empty: scrollLeft===scrollLeftMax, full: scrollLeft&lt;scrollLeftMax }" ng-click="navNext($event)"> <span><i class="icon-angle-right" aria-hidden="true"></i></span></a><div class="overflow-container scroll-element ng-isolate-scope" scroll-left="scrollMax">	<ng-transclude>
+    <div data-ng-show="loading" class="preloader ng-scope ng-hide" style="">
+      <img src="./loader(1).gif"><br>
+    </div>
+    <!-- sib4 league leading players -->
+    <!-- ngRepeat: leader in allLeaders --><!-- ngIf: !loading --><div class="sib4-league-leader ng-scope" data-ng-repeat="leader in allLeaders" ng-if="!loading" style="">
+        <!-- sib4 League Leading Players Title -->
+        <div class="sib4-league-leader-title">
+            <div class="sib3-tab"><span data-ng-i18next="_stats.PTS">得分</span></div>
+        </div>
+        <!-- sib4 League Leading Players Content Block sib4-leader-h-->
+        <div class="sib4-league-leader-content">
+
+                <div class="col-12 no-one">
+                    <div class="no-one-teamlogo">
+                        <a sib-team-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/teams/#!/cavaliers" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">
+                            <sib-img-team team-abbr="leader.starPlayer.teamProfile.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team>
+                        </a>
+                    </div>
+                    <div class="row no-one-player">
+                        <div class="col-6 no-one-player__img">
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james">
+                                <sib-img-player size="large" type="action" class="player-img-large ng-isolate-scope" player-id="leader.starPlayer.playerProfile.playerId"><img class="player-img-large" alt="undefined" src="./2544.png"></sib-img-player>
+                            </a>
+                        </div>
+                        <div class="col-6 no-one-player__info">
+                            <!-- ngIf: leadertype=='last' --><div data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">41</div><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james">
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.firstName">勒布朗</div>
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.lastName">詹姆斯</div>
+                            </a>
+                            <h5 class="ng-binding"><span class="jersey-no ng-binding">23</span> 前锋 /  <span data-ng-bind-html="leader.starPlayer.teamProfile.name" class="ng-binding">骑士</span></h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 leaders-list">
+                    <!-- ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_durant" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_durant">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./201142.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_durant" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_durant"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">凯文</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">杜兰特</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_durant" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_durant"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">凯文</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">杜兰特</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">35</span> 前锋 / 勇士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">39</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./201939.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">斯蒂芬</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">库里</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">斯蒂芬</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">库里</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">30</span> 后卫 / 勇士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">34</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players -->
+                </div>
+        </div>
+
+    </div><!-- end ngIf: !loading --><!-- end ngRepeat: leader in allLeaders --><!-- ngIf: !loading --><div class="sib4-league-leader ng-scope" data-ng-repeat="leader in allLeaders" ng-if="!loading">
+        <!-- sib4 League Leading Players Title -->
+        <div class="sib4-league-leader-title">
+            <div class="sib3-tab"><span data-ng-i18next="_stats.REB">篮板</span></div>
+        </div>
+        <!-- sib4 League Leading Players Content Block sib4-leader-h-->
+        <div class="sib4-league-leader-content">
+
+                <div class="col-12 no-one">
+                    <div class="no-one-teamlogo">
+                        <a sib-team-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/teams/#!/cavaliers" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">
+                            <sib-img-team team-abbr="leader.starPlayer.teamProfile.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team>
+                        </a>
+                    </div>
+                    <div class="row no-one-player">
+                        <div class="col-6 no-one-player__img">
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james">
+                                <sib-img-player size="large" type="action" class="player-img-large ng-isolate-scope" player-id="leader.starPlayer.playerProfile.playerId"><img class="player-img-large" alt="undefined" src="./2544.png"></sib-img-player>
+                            </a>
+                        </div>
+                        <div class="col-6 no-one-player__info">
+                            <!-- ngIf: leadertype=='last' --><div data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">13</div><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james">
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.firstName">勒布朗</div>
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.lastName">詹姆斯</div>
+                            </a>
+                            <h5 class="ng-binding"><span class="jersey-no ng-binding">23</span> 前锋 /  <span data-ng-bind-html="leader.starPlayer.teamProfile.name" class="ng-binding">骑士</span></h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 leaders-list">
+                    <!-- ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/draymond_green" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/draymond_green">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./203110.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/draymond_green" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/draymond_green"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">德雷蒙德</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">格林</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/draymond_green" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/draymond_green"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">德雷蒙德</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">格林</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">23</span> 前锋 / 勇士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">12</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_love" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_love">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./201567.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_love" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_love"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">凯文</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">乐福</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_love" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_love"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">凯文</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">乐福</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">0</span> 前锋 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">10</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players -->
+                </div>
+        </div>
+
+    </div><!-- end ngIf: !loading --><!-- end ngRepeat: leader in allLeaders --><!-- ngIf: !loading --><div class="sib4-league-leader ng-scope" data-ng-repeat="leader in allLeaders" ng-if="!loading">
+        <!-- sib4 League Leading Players Title -->
+        <div class="sib4-league-leader-title">
+            <div class="sib3-tab"><span data-ng-i18next="_stats.AST">助攻</span></div>
+        </div>
+        <!-- sib4 League Leading Players Content Block sib4-leader-h-->
+        <div class="sib4-league-leader-content">
+
+                <div class="col-12 no-one">
+                    <div class="no-one-teamlogo">
+                        <a sib-team-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/teams/#!/warriors" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/teams/#!/warriors">
+                            <sib-img-team team-abbr="leader.starPlayer.teamProfile.abbr" class="ng-isolate-scope"><img class="team-img" src="./GSW_logo.svg" type="image/svg+xml"></sib-img-team>
+                        </a>
+                    </div>
+                    <div class="row no-one-player">
+                        <div class="col-6 no-one-player__img">
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry">
+                                <sib-img-player size="large" type="action" class="player-img-large ng-isolate-scope" player-id="leader.starPlayer.playerProfile.playerId"><img class="player-img-large" alt="undefined" src="./201939(1).png"></sib-img-player>
+                            </a>
+                        </div>
+                        <div class="col-6 no-one-player__info">
+                            <!-- ngIf: leadertype=='last' --><div data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">10</div><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry">
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.firstName">斯蒂芬</div>
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.lastName">库里</div>
+                            </a>
+                            <h5 class="ng-binding"><span class="jersey-no ng-binding">30</span> 后卫 /  <span data-ng-bind-html="leader.starPlayer.teamProfile.name" class="ng-binding">勇士</span></h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 leaders-list">
+                    <!-- ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./2544(1).png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">勒布朗</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">詹姆斯</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">勒布朗</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">詹姆斯</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">23</span> 前锋 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">8</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kyrie_irving" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kyrie_irving">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./202681.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kyrie_irving" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kyrie_irving"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">凯尔</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">欧文</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kyrie_irving" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kyrie_irving"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">凯尔</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">欧文</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">2</span> 后卫 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">6</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players -->
+                </div>
+        </div>
+
+    </div><!-- end ngIf: !loading --><!-- end ngRepeat: leader in allLeaders --><!-- ngIf: !loading --><div class="sib4-league-leader ng-scope" data-ng-repeat="leader in allLeaders" ng-if="!loading">
+        <!-- sib4 League Leading Players Title -->
+        <div class="sib4-league-leader-title">
+            <div class="sib3-tab"><span data-ng-i18next="_stats.BLK">盖帽</span></div>
+        </div>
+        <!-- sib4 League Leading Players Content Block sib4-leader-h-->
+        <div class="sib4-league-leader-content">
+
+                <div class="col-12 no-one">
+                    <div class="no-one-teamlogo">
+                        <a sib-team-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/teams/#!/cavaliers" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">
+                            <sib-img-team team-abbr="leader.starPlayer.teamProfile.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team>
+                        </a>
+                    </div>
+                    <div class="row no-one-player">
+                        <div class="col-6 no-one-player__img">
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/jr_smith" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/jr_smith">
+                                <sib-img-player size="large" type="action" class="player-img-large ng-isolate-scope" player-id="leader.starPlayer.playerProfile.playerId"><img class="player-img-large" alt="undefined" src="./2747.png"></sib-img-player>
+                            </a>
+                        </div>
+                        <div class="col-6 no-one-player__info">
+                            <!-- ngIf: leadertype=='last' --><div data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">2</div><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/jr_smith" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/jr_smith">
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.firstName">JR</div>
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.lastName">史密斯</div>
+                            </a>
+                            <h5 class="ng-binding"><span class="jersey-no ng-binding">5</span> 后卫 /  <span data-ng-bind-html="leader.starPlayer.teamProfile.name" class="ng-binding">骑士</span></h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 leaders-list">
+                    <!-- ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_love" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_love">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./201567.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_love" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_love"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">凯文</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">乐福</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kevin_love" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kevin_love"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">凯文</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">乐福</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">0</span> 前锋 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">1</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/tristan_thompson" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/tristan_thompson">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./202684.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/tristan_thompson" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/tristan_thompson"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">特里斯坦</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">汤普森</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/tristan_thompson" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/tristan_thompson"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">特里斯坦</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">汤普森</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">13</span> 中锋 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">1</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players -->
+                </div>
+        </div>
+
+    </div><!-- end ngIf: !loading --><!-- end ngRepeat: leader in allLeaders --><!-- ngIf: !loading --><div class="sib4-league-leader ng-scope" data-ng-repeat="leader in allLeaders" ng-if="!loading">
+        <!-- sib4 League Leading Players Title -->
+        <div class="sib4-league-leader-title">
+            <div class="sib3-tab"><span data-ng-i18next="_stats.STL">抢断</span></div>
+        </div>
+        <!-- sib4 League Leading Players Content Block sib4-leader-h-->
+        <div class="sib4-league-leader-content">
+
+                <div class="col-12 no-one">
+                    <div class="no-one-teamlogo">
+                        <a sib-team-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/teams/#!/warriors" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/teams/#!/warriors">
+                            <sib-img-team team-abbr="leader.starPlayer.teamProfile.abbr" class="ng-isolate-scope"><img class="team-img" src="./GSW_logo.svg" type="image/svg+xml"></sib-img-team>
+                        </a>
+                    </div>
+                    <div class="row no-one-player">
+                        <div class="col-6 no-one-player__img">
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry">
+                                <sib-img-player size="large" type="action" class="player-img-large ng-isolate-scope" player-id="leader.starPlayer.playerProfile.playerId"><img class="player-img-large" alt="undefined" src="./201939(1).png"></sib-img-player>
+                            </a>
+                        </div>
+                        <div class="col-6 no-one-player__info">
+                            <!-- ngIf: leadertype=='last' --><div data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">3</div><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                            <a sib-player-urls="" team="leader.starPlayer.teamProfile" data-ng-href="/players/#!/stephen_curry" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/stephen_curry">
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.firstName">斯蒂芬</div>
+                                <div class="name ng-binding" data-ng-bind-html="leader.starPlayer.playerProfile.lastName">库里</div>
+                            </a>
+                            <h5 class="ng-binding"><span class="jersey-no ng-binding">30</span> 后卫 /  <span data-ng-bind-html="leader.starPlayer.teamProfile.name" class="ng-binding">勇士</span></h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 leaders-list">
+                    <!-- ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kyrie_irving" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kyrie_irving">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./202681.png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kyrie_irving" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kyrie_irving"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">凯尔</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">欧文</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/kyrie_irving" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/kyrie_irving"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">凯尔</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">欧文</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">2</span> 后卫 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">2</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players --><div class="row list-row ng-scope" data-ng-repeat="player in leader.players">
+                        <div class="col-10 player">
+                            <div class="col-3 player-headshot">
+                                <a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james">
+                                    <sib-img-player class="player-img-small ng-isolate-scope" size="small" type="head" player-id="player.playerProfile.playerId"><img class="player-img-small" alt="undefined" src="./2544(1).png"></sib-img-player>
+                                </a>
+                            </div>
+                            <div class="col-9 player-info">
+                                <div class="name hidden-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james"><span data-ng-bind-html="player.playerProfile.firstName" class="ng-binding">勒布朗</span><span data-ng-show="player.playerProfile.firstName" class=""><span data-ng-i18next="delimiter.firstNameLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">詹姆斯</span></a></div>
+                                <div class="name visible-sm"><a sib-player-urls="" team="player.teamProfile" data-ng-href="/players/#!/lebron_james" class="ng-isolate-scope" target="_parent" href="http://china.nba.com/players/#!/lebron_james"><span data-ng-bind-html="player.playerProfile.firstInitial" class="ng-binding">勒布朗</span><span data-ng-show="player.playerProfile.firstInitial" class=""><span data-ng-i18next="delimiter.initialLastName">-</span></span><span data-ng-bind-html="player.playerProfile.lastName" class="ng-binding">詹姆斯</span></a></div>
+                                <div class="team-name ng-binding"> <span class="jersey-no ng-binding">23</span> 前锋 / 骑士</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pct">
+                            <!-- ngIf: leadertype=='last' --><span data-ng-if="leadertype==&#39;last&#39;" class="pct ng-binding ng-scope">2</span><!-- end ngIf: leadertype=='last' -->
+                            <!-- ngIf: leadertype=='season' -->
+                        </div>
+                    </div><!-- end ngRepeat: player in leader.players -->
+                </div>
+        </div>
+
+    </div><!-- end ngIf: !loading --><!-- end ngRepeat: leader in allLeaders -->
+</ng-transclude></div></scroll-listener><!--[if !IE]>|xGv00|72d6c2dd68c492db8f8b34a1d4dc0649<![endif]--></sib4-leader-desktop-directive>
+  	  	</div>
+	  </div><div class="clearfix"></div>
+		<!--  END: DESKTOP LEADER CONTENT -->
+  	</div><!-- end ngIf: !mobile -->
+
+
+	<!-- MOBILE LEADER -->
+	<!-- ngIf: mobile -->
+</div>  
+</div>
+
+
+    <!-- End Widget -->
+  </div>
+</div>
+<!-- .widget-container -->
+<!--[if !IE]>|xGv00|64e47ff20fe194acf5e45fa517c71dbd<![endif]-->        <!-- End widget-content -->
+        
+      </div> <!-- /container -->
+    </div> <!-- /app-container -->
+    <script>
+    // IE console.log fix
+    if (!window.console) {
+      console = {log: function() {}};
+    }
+    </script>
+
+      
+    <script src="./libs.min.js(1).下载"></script>
+    <script src="./custom.min.js(1).下载"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/scripts/lib/json3.min.js"></script>
+      <script src="/scripts/lib/ieshiv.js"></script>
+    <![endif]-->
+            
+                                           
+     <!--SSI /frags/licensee_widget_scripts_footer.html -->
+<script type="text/javascript">
+  angular.element('a').attr('target','_parent');
+</script>
+<style>
+body {
+  background-image:none !important;
+}
+</style><!--[if !IE]>|xGv00|0beadd0cff7796ec412f959b040d7fe2<![endif]-->   
+  
+</body></html>

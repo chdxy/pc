@@ -1,0 +1,30 @@
+/*≥ı ºªØ*/
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,span,form,dd,dt,dl,
+fieldset,legend,optgroup,label,frame,frameset{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style: none;
+}
+img,input{
+    border:0;
+}
+.clearfix:after{
+    content: "";
+    height:0;
+    line-height: 0;
+    clear:both;
+    display: block;
+    visibility: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
+.w{
+    width:1300px;
+    height:0 auto;
+}

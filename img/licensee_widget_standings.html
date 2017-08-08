@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://china.nba.com/articles/licensee_widget_standings.html -->
+<html xmlns:ng="http://angularjs.org" lang="en" class=" js svg inlinesvg svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+     <!-- Font face import -->
+    <link href="./fontface(1).css" rel="stylesheet">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title></title>
+    <link href="./libs.min(1).css" rel="stylesheet">
+    <link href="./custom.min(1).css" rel="stylesheet">
+	  <!--SSI /frags/licensee_scripts_header.html -->
+	  <!-- start licensee_widget_scripts_header  -->
+
+
+<!-- end licensee_widget_scripts_header  --><!--[if !IE]>|xGv00|7b93ab1228e4222502f06a0e3c1644db<![endif]-->
+	
+    <!--[if IE]>
+      <link href="/styles/libs/font-awesome-ie7.min.css" rel="stylesheet">
+      
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      
+      <script src="/scripts/libs/es5-shim.min.js"></script>
+      <script src="/scripts/libs/es5-sham.min.js"></script>
+
+      <script>
+        document.createElement('sib-bar-chart');
+        document.createElement('sib-bar');
+        document.createElement('sib-fallback-src');
+        document.createElement('sib-hotzone-chart');
+        document.createElement('sib-img-player');
+        document.createElement('sib-img-team');
+        document.createElement('sib-playoff-scoreboard-slider');
+        document.createElement('sib-scoreboard-date');
+        document.createElement('sib-scoreboard-slider');
+        document.createElement('sib-social-icons');
+        document.createElement('sib-calendar');
+        document.createElement('sib-scores-calendar');
+        document.createElement('sib-team-twitter');
+        document.createElement('sib-playoff-bracket');
+        document.createElement('ng-pluralize');
+      </script>
+      <style>
+        .sib-table-container select {
+          background-image: none !important;
+        }
+        #player-index-search-label {
+          display: inline !important;
+        }
+        .sib-scoreboard .scoreboard .page .game .teams:hover .overlay{ display:block; }
+      </style>
+    <![endif]-->
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {  display: none !important; }
+      .wf-loading { border-top: 0px solid #ffffff; }      
+    </style>  
+  </head>
+  <body data-ng-app="sib" id="ng:app" class="ng-app:sib ng-scope" style="">
+    <div data-ng-show="loading &amp;&amp; !errors.length" class="preloader ng-hide">
+        <img src="./loader(1).gif"><br>
+    </div>
+    <div id="app-container" class="" data-ng-hide="loading">
+      <div class="widget-container-outer" id="widget-container-outer">
+
+        <!-- Start widget-content -->
+         <!--SSI /widget/include/standings/index.html -->
+<div class="widget-container ng-isolate-scope" sib-iframe-notice="">
+  
+  <div class="" data-ng-hide="loading">
+    <!-- Start Widget -->
+    <section class="standings">
+  <div class="row">
+    <div>
+      
+      <!-- Table Start -->
+<div class="sib-table-container sib-table-league-standings ng-scope" data-ng-controller="StandingsController" data-sort-field="confRank" data-sort-direction="-1" data-deep-link="false" ng-init="grouping=&#39;displayConference&#39;;columnSet=&#39;standings&#39;;selected=&#39;Eastern&#39;;conferences=[{c:&#39;easternConf&#39;,v:&#39;Eastern&#39;},{c:&#39;westernConf&#39;,v:&#39;Western&#39;}];">
+  <div class="table-title desktop">
+    <div class="title">
+      <span data-ng-i18next="leagueStandings.title">联盟排名</span>
+    </div>
+    <div class="table-toggle">
+      <div data-ng-class="{toggled: grouping==&#39;displayConference&#39;}" data-ng-click="grouping=&#39;displayConference&#39;" class="toggled"><span data-ng-i18next="_stats.CONF">联盟</span></div>
+      <div data-ng-class="{toggled: grouping==&#39;division&#39;}" data-ng-click="grouping=&#39;division&#39;"><span data-ng-i18next="_stats.DIV">分区</span></div>
+    </div>
+    <div class="sib3-table-categories">
+      <div data-ng-class="{toggled: columnSet==&#39;standings&#39;}" data-ng-click="columnSet=&#39;standings&#39;" class="sib3-category toggled"><span data-ng-i18next="leagueStandings.standings">排名</span></div>
+      <div data-ng-class="{toggled: columnSet==&#39;streaks&#39;}" data-ng-click="columnSet=&#39;streaks&#39;" class="sib3-category"><span data-ng-i18next="leagueStandings.streaksLast10">最近10场&amp;连续成绩</span></div>
+      <div data-ng-class="{toggled: columnSet==&#39;margin&#39;}" data-ng-click="columnSet=&#39;margin&#39;" class="sib3-category"><span data-ng-i18next="leagueStandings.marginStatistics">分差 &amp; 统计</span></div>
+      <div data-ng-class="{toggled: columnSet==&#39;ahead&#39;}" data-ng-click="columnSet=&#39;ahead&#39;" class="sib3-category"><span data-ng-i18next="leagueStandings.aheadBehind">领先 &amp; 落后</span></div>
+    </div>
+    <div class="sib3-table-conferences">
+      <div data-ng-class="{toggled: selectedConference==&#39;eastern&#39;}" data-ng-click="toggleConference(&#39;eastern&#39;)" class="sib3-conference"><span data-ng-i18next="_stats.easternConf">东部联盟</span></div>
+      <div data-ng-class="{toggled: selectedConference==&#39;western&#39;}" data-ng-click="toggleConference(&#39;western&#39;)" class="sib3-conference"><span data-ng-i18next="_stats.westernConf">西部联盟</span></div>
+    </div>    
+  </div>
+
+  <div class="standings-group mobile">
+    <a href="http://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__toggle standings-group__toggle-conf toggled" ng-class="{ toggled: grouping===&#39;displayConference&#39; }" data-ng-click="grouping=&#39;displayConference&#39;" target="_parent"><span data-ng-i18next="_stats.CONF">联盟</span><span data-ng-i18next="leagueStandings.standings">排名</span></a>
+    <a href="http://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__toggle standings-group__toggle-div" ng-class="{ toggled: grouping===&#39;division&#39; }" data-ng-click="grouping=&#39;division&#39;" target="_parent"><span data-ng-i18next="_stats.DIV">分区</span><span data-ng-i18next="leagueStandings.standings">排名</span></a>
+  </div>
+  
+  <div class="standings-group mobile standings-group__border">
+
+    <div>
+      <!-- ngRepeat: conf in conferences --><div class="standings-group__wrapper ng-scope" ng-repeat="conf in conferences" data-ng-click="updateConf(conf.v)">
+        <a href="http://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__select standings-group__select-conf toggled" ng-class="{ toggled: selected===conf.v }" target="_parent"><img data-ng-src="/media/img/eastern_logo.png" alt="eastern" src="./eastern_logo.png"><span data-ng-i18next="_stats.easternConf">东部联盟</span></a>
+      </div><!-- end ngRepeat: conf in conferences --><div class="standings-group__wrapper ng-scope" ng-repeat="conf in conferences" data-ng-click="updateConf(conf.v)">
+        <a href="http://china.nba.com/articles/licensee_widget_standings.html" class="standings-group__select standings-group__select-conf" ng-class="{ toggled: selected===conf.v }" target="_parent"><img data-ng-src="/media/img/western_logo.png" alt="western" src="./western_logo.png"><span data-ng-i18next="_stats.westernConf">西部联盟</span></a>
+      </div><!-- end ngRepeat: conf in conferences -->
+    </div>
+
+  </div>
+
+  <div data-ng-show="moduleLoading" class="preloader ng-hide">
+    <img src="./loader(1).gif"><br>
+  </div>
+
+  <div class="standings-tables">
+    <div data-ng-show="loading" class="preloader ng-hide" style="">
+      <img src="./loader(1).gif"><br>
+    </div>
+
+    <div class="mobile">
+      <!-- ngRepeat: group in groups --><!-- ngIf: selected===group.conference && !loading --><nba-stat-table ng-repeat="group in groups" ng-if="selected===group.conference &amp;&amp; !loading" rows="group.teams" data-title="东部" ai="grouping" options="options" template="standings/standings-overall" class="ng-scope ng-isolate-scope" style=""><!-- ngIf: title --><div ng-if="title" class="nba-stat-table__caption ng-scope desktop" ng-class="{ desktop: ai===&#39;displayConference&#39; }">
+  <!-- ngIf: ai==='displayConference' --><img data-ng-src="/media/img/eastern_logo.png" alt="eastern" class="conference ng-scope" ng-if="ai===&#39;displayConference&#39;" src="./eastern_logo.png"><!-- end ngIf: ai==='displayConference' -->
+  <span class="ng-binding">东部</span><!-- ngIf: ai==='displayConference' --><span ng-if="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.CONF" class="ng-scope">联盟</span><!-- end ngIf: ai==='displayConference' -->
+</div><!-- end ngIf: title -->
+
+<div class="nba-stat-table" bindonce="">
+  <div class="nba-stat-table__overflow" data-fixed="3" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="rank nobr center sorted asc" sort="" data-field="confRank" data-dir="-1" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th class="rank nobr center ng-hide" sort="" data-field="divRank" data-dir="-1" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th></th> <!-- Team Logo -->
+          <th class="nobr player center desktop" sort="" data-field="city" data-dir="-1" data-ng-i18next="_stats.name" ripple="">姓名</th>
+          <th class="nobr teamabbr center mobile" sort="" data-field="displayAbbr" data-dir="-1" data-ng-i18next="_stats.name" ripple="">姓名</th>
+          <th class="nobr center" sort="" data-field="wins" data-ng-i18next="_stats.W" ripple="">胜</th>
+          <th class="nobr center" sort="" data-field="losses" data-ng-i18next="_stats.L" ripple="">负</th>
+          <th class="nobr center desktop" sort="" data-field="winPct" data-ng-i18next="_stats.PCT" ripple="">胜率</th>
+          <th class="nobr center" sort="" data-field="confGamesBehind" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.GB" ripple="">胜场差</th>
+          <th class="nobr center ng-hide" sort="" data-field="divGameBehind" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.GB" ripple="">胜场差</th>
+          <th class="nobr center desktop" data-field="confWin" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.CONF">联盟</th>
+          <th class="nobr center desktop ng-hide" data-field="divWin" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.DIV">分区</th>
+          <th class="nobr center desktop" data-field="homeWin" data-ng-i18next="leagueStandings.home">主场</th>
+          <th class="nobr center desktop" data-field="roadWin" data-ng-i18next="leagueStandings.road">客场</th>
+          <th class="nobr center desktop" data-field="last10" data-ng-i18next="leagueStandings.last10">最近10场</th>
+          <th class="nobr center desktop" data-field="streak" data-ng-i18next="leagueStandings.streak">连续成绩</th>
+          <th class="nobr center desktop" sort="" data-field="pointsFor" data-ng-i18next="_stats.pointsFor" ripple="">得分/场</th>
+          <th class="nobr center desktop" sort="" data-field="pointsAgainst" data-ng-i18next="_stats.PA" ripple="">场均失分</th>
+          <th class="nobr center desktop" sort="" data-field="pointsDiff" data-ng-i18next="_stats.DIFF" ripple="">差距</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="0" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">01</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BOS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/celtics" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/celtics">e&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->波士顿&nbsp;凯尔特人</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/celtics" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/celtics">e&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->凯尔特人</a>
+          </td>
+          <td class="center bold ng-binding">53</td>
+          <td class="center bold ng-binding">29</td>
+          <td class="center bold desktop ng-binding">64.6</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">0</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">36&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">11&nbsp;-&nbsp;5</td>
+          <td class="center bold desktop ng-binding">30&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">7-3</td>
+          <td class="center bold desktop ng-binding">胜 3</td>
+          <td class="center bold desktop ng-binding">108</td>
+          <td class="center bold desktop ng-binding">105.4</td>
+          <td class="center bold desktop ng-binding">2.6</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="1" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">02</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/cavaliers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">c&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->克利夫兰&nbsp;骑士</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/cavaliers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">c&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->骑士</a>
+          </td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold desktop ng-binding">62.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">2</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">35&nbsp;-&nbsp;17</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">31&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">20&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">负 4</td>
+          <td class="center bold desktop ng-binding">110.3</td>
+          <td class="center bold desktop ng-binding">107.2</td>
+          <td class="center bold desktop ng-binding">3.1</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="2" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">03</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./TOR_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/raptors" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/raptors">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->多伦多&nbsp;猛龙</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/raptors" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/raptors">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->猛龙</a>
+          </td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold desktop ng-binding">62.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">2</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">2</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">34&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">14&nbsp;-&nbsp;2</td>
+          <td class="center bold desktop ng-binding">28&nbsp;-&nbsp;13</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">8-2</td>
+          <td class="center bold desktop ng-binding">胜 4</td>
+          <td class="center bold desktop ng-binding">106.9</td>
+          <td class="center bold desktop ng-binding">102.6</td>
+          <td class="center bold desktop ng-binding">4.3</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="3" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">04</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./WAS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/wizards" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/wizards">se&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->华盛顿&nbsp;奇才</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/wizards" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/wizards">se&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->奇才</a>
+          </td>
+          <td class="center bold ng-binding">49</td>
+          <td class="center bold ng-binding">33</td>
+          <td class="center bold desktop ng-binding">59.8</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">4</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">32&nbsp;-&nbsp;20</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">30&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">109.2</td>
+          <td class="center bold desktop ng-binding">107.4</td>
+          <td class="center bold desktop ng-binding">1.8</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="4" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">05</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ATL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/hawks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hawks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->亚特兰大&nbsp;老鹰</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/hawks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hawks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->老鹰</a>
+          </td>
+          <td class="center bold ng-binding">43</td>
+          <td class="center bold ng-binding">39</td>
+          <td class="center bold desktop ng-binding">52.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">30&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">20&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">103.2</td>
+          <td class="center bold desktop ng-binding">104</td>
+          <td class="center bold desktop ng-binding">-0.8</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="5" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">06</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/bucks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bucks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->密尔沃基&nbsp;雄鹿</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/bucks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bucks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->雄鹿</a>
+          </td>
+          <td class="center bold ng-binding">42</td>
+          <td class="center bold ng-binding">40</td>
+          <td class="center bold desktop ng-binding">51.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">27&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">103.6</td>
+          <td class="center bold desktop ng-binding">103.8</td>
+          <td class="center bold desktop ng-binding">-0.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="6" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">07</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./IND_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/pacers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pacers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->印第安纳&nbsp;步行者</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/pacers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pacers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->步行者</a>
+          </td>
+          <td class="center bold ng-binding">42</td>
+          <td class="center bold ng-binding">40</td>
+          <td class="center bold desktop ng-binding">51.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">26&nbsp;-&nbsp;26</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">29&nbsp;-&nbsp;12</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">胜 5</td>
+          <td class="center bold desktop ng-binding">105.1</td>
+          <td class="center bold desktop ng-binding">105.3</td>
+          <td class="center bold desktop ng-binding">-0.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="7" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">08</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/bulls" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bulls">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->芝加哥&nbsp;公牛</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/bulls" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bulls">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->公牛</a>
+          </td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold desktop ng-binding">50</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">28&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9&nbsp;-&nbsp;7</td>
+          <td class="center bold desktop ng-binding">25&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding">16&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding">7-3</td>
+          <td class="center bold desktop ng-binding">胜 2</td>
+          <td class="center bold desktop ng-binding">102.9</td>
+          <td class="center bold desktop ng-binding">102.4</td>
+          <td class="center bold desktop ng-binding">0.5</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="8" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">09</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/heat" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/heat">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->迈阿密&nbsp;热火</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/heat" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/heat">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->热火</a>
+          </td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold desktop ng-binding">50</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">27&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9&nbsp;-&nbsp;7</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">18&nbsp;-&nbsp;23</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">胜 3</td>
+          <td class="center bold desktop ng-binding">103.2</td>
+          <td class="center bold desktop ng-binding">102.1</td>
+          <td class="center bold desktop ng-binding">1.1</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="9" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DET_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/pistons" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pistons">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->底特律&nbsp;活塞</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/pistons" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pistons">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->活塞</a>
+          </td>
+          <td class="center bold ng-binding">37</td>
+          <td class="center bold ng-binding">45</td>
+          <td class="center bold desktop ng-binding">45.1</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">16</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">14</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">21&nbsp;-&nbsp;31</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">5&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">24&nbsp;-&nbsp;17</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">3-7</td>
+          <td class="center bold desktop ng-binding">负 2</td>
+          <td class="center bold desktop ng-binding">101.3</td>
+          <td class="center bold desktop ng-binding">102.5</td>
+          <td class="center bold desktop ng-binding">-1.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="10" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/hornets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hornets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->夏洛特&nbsp;黄蜂</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/hornets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hornets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->黄蜂</a>
+          </td>
+          <td class="center bold ng-binding">36</td>
+          <td class="center bold ng-binding">46</td>
+          <td class="center bold desktop ng-binding">43.9</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">17</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">13</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">22&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">22&nbsp;-&nbsp;19</td>
+          <td class="center bold desktop ng-binding">14&nbsp;-&nbsp;27</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">负 5</td>
+          <td class="center bold desktop ng-binding">104.9</td>
+          <td class="center bold desktop ng-binding">104.7</td>
+          <td class="center bold desktop ng-binding">0.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="11" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./NYK_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/knicks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/knicks">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->纽约&nbsp;尼克斯</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/knicks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/knicks">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->尼克斯</a>
+          </td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold desktop ng-binding">37.8</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">22</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">22</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">22&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">5&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">12&nbsp;-&nbsp;29</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">104.3</td>
+          <td class="center bold desktop ng-binding">108</td>
+          <td class="center bold desktop ng-binding">-3.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="12" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">13</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ORL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/magic" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/magic">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->奥兰多&nbsp;魔术</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/magic" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/magic">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->魔术</a>
+          </td>
+          <td class="center bold ng-binding">29</td>
+          <td class="center bold ng-binding">53</td>
+          <td class="center bold desktop ng-binding">35.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">24</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">20</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">20&nbsp;-&nbsp;32</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">7&nbsp;-&nbsp;9</td>
+          <td class="center bold desktop ng-binding">16&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">3-7</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">101.1</td>
+          <td class="center bold desktop ng-binding">107.6</td>
+          <td class="center bold desktop ng-binding">-6.5</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="13" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">14</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./PHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/sixers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/sixers">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->费城&nbsp;76人</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/sixers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/sixers">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->76人</a>
+          </td>
+          <td class="center bold ng-binding">28</td>
+          <td class="center bold ng-binding">54</td>
+          <td class="center bold desktop ng-binding">34.1</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">25</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">25</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">19&nbsp;-&nbsp;33</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">7&nbsp;-&nbsp;9</td>
+          <td class="center bold desktop ng-binding">17&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding">11&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding">1-9</td>
+          <td class="center bold desktop ng-binding">负 8</td>
+          <td class="center bold desktop ng-binding">102.4</td>
+          <td class="center bold desktop ng-binding">108.1</td>
+          <td class="center bold desktop ng-binding">-5.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="14" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">15</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BKN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/nets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/nets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->布鲁克林&nbsp;篮网</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/nets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/nets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->篮网</a>
+          </td>
+          <td class="center bold ng-binding">20</td>
+          <td class="center bold ng-binding">62</td>
+          <td class="center bold desktop ng-binding">24.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">33</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">33</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">11&nbsp;-&nbsp;41</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">3&nbsp;-&nbsp;13</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">7&nbsp;-&nbsp;34</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 2</td>
+          <td class="center bold desktop ng-binding">105.8</td>
+          <td class="center bold desktop ng-binding">112.5</td>
+          <td class="center bold desktop ng-binding">-6.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page -->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="3" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="rank nobr center sorted asc" sort="" data-field="confRank" data-dir="-1" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th class="rank nobr center ng-hide" sort="" data-field="divRank" data-dir="-1" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th></th> <!-- Team Logo -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="0" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">01</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BOS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="1" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">02</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="2" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">03</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./TOR_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="3" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">04</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./WAS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="4" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">05</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ATL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="5" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">06</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="6" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">07</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./IND_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="7" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">08</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="8" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">09</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="9" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DET_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="10" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="11" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./NYK_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="12" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">13</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ORL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="13" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">14</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./PHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="14" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">15</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BKN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page -->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<!--[if !IE]>|xGv00|7c2e3b7e5884c3ed361e32c10e22e151<![endif]--><div stats-table-add-rows=""><!-- ngIf: visibleRows < totalRows --></div></nba-stat-table><!-- end ngIf: selected===group.conference && !loading --><!-- end ngRepeat: group in groups --><!-- ngIf: selected===group.conference && !loading --><!-- end ngRepeat: group in groups -->
+    </div>
+
+    <!-- ngIf: columnSet==='standings' && !loading --><div class="desktop ng-scope" ng-if="columnSet===&#39;standings&#39; &amp;&amp; !loading" style="">
+      <!-- ngRepeat: group in groups --><nba-stat-table ng-repeat-start="group in groups" rows="group.teams" data-title="东部" ai="grouping" options="options" template="standings/standings-overall" class="ng-scope ng-isolate-scope"><!-- ngIf: title --><div ng-if="title" class="nba-stat-table__caption ng-scope desktop" ng-class="{ desktop: ai===&#39;displayConference&#39; }">
+  <!-- ngIf: ai==='displayConference' --><img data-ng-src="/media/img/eastern_logo.png" alt="eastern" class="conference ng-scope" ng-if="ai===&#39;displayConference&#39;" src="./eastern_logo.png"><!-- end ngIf: ai==='displayConference' -->
+  <span class="ng-binding">东部</span><!-- ngIf: ai==='displayConference' --><span ng-if="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.CONF" class="ng-scope">联盟</span><!-- end ngIf: ai==='displayConference' -->
+</div><!-- end ngIf: title -->
+
+<div class="nba-stat-table" bindonce="">
+  <div class="nba-stat-table__overflow" data-fixed="3" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="rank nobr center sorted asc" sort="" data-field="confRank" data-dir="-1" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th class="rank nobr center ng-hide" sort="" data-field="divRank" data-dir="-1" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th></th> <!-- Team Logo -->
+          <th class="nobr player center desktop" sort="" data-field="city" data-dir="-1" data-ng-i18next="_stats.name" ripple="">姓名</th>
+          <th class="nobr teamabbr center mobile" sort="" data-field="displayAbbr" data-dir="-1" data-ng-i18next="_stats.name" ripple="">姓名</th>
+          <th class="nobr center" sort="" data-field="wins" data-ng-i18next="_stats.W" ripple="">胜</th>
+          <th class="nobr center" sort="" data-field="losses" data-ng-i18next="_stats.L" ripple="">负</th>
+          <th class="nobr center desktop" sort="" data-field="winPct" data-ng-i18next="_stats.PCT" ripple="">胜率</th>
+          <th class="nobr center" sort="" data-field="confGamesBehind" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.GB" ripple="">胜场差</th>
+          <th class="nobr center ng-hide" sort="" data-field="divGameBehind" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.GB" ripple="">胜场差</th>
+          <th class="nobr center desktop" data-field="confWin" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.CONF">联盟</th>
+          <th class="nobr center desktop ng-hide" data-field="divWin" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.DIV">分区</th>
+          <th class="nobr center desktop" data-field="homeWin" data-ng-i18next="leagueStandings.home">主场</th>
+          <th class="nobr center desktop" data-field="roadWin" data-ng-i18next="leagueStandings.road">客场</th>
+          <th class="nobr center desktop" data-field="last10" data-ng-i18next="leagueStandings.last10">最近10场</th>
+          <th class="nobr center desktop" data-field="streak" data-ng-i18next="leagueStandings.streak">连续成绩</th>
+          <th class="nobr center desktop" sort="" data-field="pointsFor" data-ng-i18next="_stats.pointsFor" ripple="">得分/场</th>
+          <th class="nobr center desktop" sort="" data-field="pointsAgainst" data-ng-i18next="_stats.PA" ripple="">场均失分</th>
+          <th class="nobr center desktop" sort="" data-field="pointsDiff" data-ng-i18next="_stats.DIFF" ripple="">差距</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="0" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">01</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BOS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/celtics" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/celtics">e&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->波士顿&nbsp;凯尔特人</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/celtics" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/celtics">e&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->凯尔特人</a>
+          </td>
+          <td class="center bold ng-binding">53</td>
+          <td class="center bold ng-binding">29</td>
+          <td class="center bold desktop ng-binding">64.6</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">0</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">36&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">11&nbsp;-&nbsp;5</td>
+          <td class="center bold desktop ng-binding">30&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">7-3</td>
+          <td class="center bold desktop ng-binding">胜 3</td>
+          <td class="center bold desktop ng-binding">108</td>
+          <td class="center bold desktop ng-binding">105.4</td>
+          <td class="center bold desktop ng-binding">2.6</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="1" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">02</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/cavaliers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">c&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->克利夫兰&nbsp;骑士</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/cavaliers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/cavaliers">c&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->骑士</a>
+          </td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold desktop ng-binding">62.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">2</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">35&nbsp;-&nbsp;17</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">31&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">20&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">负 4</td>
+          <td class="center bold desktop ng-binding">110.3</td>
+          <td class="center bold desktop ng-binding">107.2</td>
+          <td class="center bold desktop ng-binding">3.1</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="2" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">03</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./TOR_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/raptors" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/raptors">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->多伦多&nbsp;猛龙</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/raptors" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/raptors">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->猛龙</a>
+          </td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold desktop ng-binding">62.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">2</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">2</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">34&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">14&nbsp;-&nbsp;2</td>
+          <td class="center bold desktop ng-binding">28&nbsp;-&nbsp;13</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">8-2</td>
+          <td class="center bold desktop ng-binding">胜 4</td>
+          <td class="center bold desktop ng-binding">106.9</td>
+          <td class="center bold desktop ng-binding">102.6</td>
+          <td class="center bold desktop ng-binding">4.3</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="3" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">04</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./WAS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/wizards" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/wizards">se&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->华盛顿&nbsp;奇才</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/wizards" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/wizards">se&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->奇才</a>
+          </td>
+          <td class="center bold ng-binding">49</td>
+          <td class="center bold ng-binding">33</td>
+          <td class="center bold desktop ng-binding">59.8</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">4</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">32&nbsp;-&nbsp;20</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">30&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">109.2</td>
+          <td class="center bold desktop ng-binding">107.4</td>
+          <td class="center bold desktop ng-binding">1.8</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="4" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">05</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ATL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/hawks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hawks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->亚特兰大&nbsp;老鹰</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/hawks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hawks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->老鹰</a>
+          </td>
+          <td class="center bold ng-binding">43</td>
+          <td class="center bold ng-binding">39</td>
+          <td class="center bold desktop ng-binding">52.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">30&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">20&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">103.2</td>
+          <td class="center bold desktop ng-binding">104</td>
+          <td class="center bold desktop ng-binding">-0.8</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="5" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">06</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/bucks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bucks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->密尔沃基&nbsp;雄鹿</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/bucks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bucks">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->雄鹿</a>
+          </td>
+          <td class="center bold ng-binding">42</td>
+          <td class="center bold ng-binding">40</td>
+          <td class="center bold desktop ng-binding">51.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">27&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">103.6</td>
+          <td class="center bold desktop ng-binding">103.8</td>
+          <td class="center bold desktop ng-binding">-0.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="6" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">07</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./IND_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/pacers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pacers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->印第安纳&nbsp;步行者</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/pacers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pacers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->步行者</a>
+          </td>
+          <td class="center bold ng-binding">42</td>
+          <td class="center bold ng-binding">40</td>
+          <td class="center bold desktop ng-binding">51.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">26&nbsp;-&nbsp;26</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">29&nbsp;-&nbsp;12</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">胜 5</td>
+          <td class="center bold desktop ng-binding">105.1</td>
+          <td class="center bold desktop ng-binding">105.3</td>
+          <td class="center bold desktop ng-binding">-0.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="7" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">08</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/bulls" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bulls">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->芝加哥&nbsp;公牛</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/bulls" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/bulls">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->公牛</a>
+          </td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold desktop ng-binding">50</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">28&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9&nbsp;-&nbsp;7</td>
+          <td class="center bold desktop ng-binding">25&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding">16&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding">7-3</td>
+          <td class="center bold desktop ng-binding">胜 2</td>
+          <td class="center bold desktop ng-binding">102.9</td>
+          <td class="center bold desktop ng-binding">102.4</td>
+          <td class="center bold desktop ng-binding">0.5</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="8" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">09</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/heat" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/heat">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->迈阿密&nbsp;热火</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/heat" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/heat">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->热火</a>
+          </td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold desktop ng-binding">50</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">27&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">9&nbsp;-&nbsp;7</td>
+          <td class="center bold desktop ng-binding">23&nbsp;-&nbsp;18</td>
+          <td class="center bold desktop ng-binding">18&nbsp;-&nbsp;23</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">胜 3</td>
+          <td class="center bold desktop ng-binding">103.2</td>
+          <td class="center bold desktop ng-binding">102.1</td>
+          <td class="center bold desktop ng-binding">1.1</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="9" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DET_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/pistons" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pistons">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->底特律&nbsp;活塞</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/pistons" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pistons">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->活塞</a>
+          </td>
+          <td class="center bold ng-binding">37</td>
+          <td class="center bold ng-binding">45</td>
+          <td class="center bold desktop ng-binding">45.1</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">16</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">14</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">21&nbsp;-&nbsp;31</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">5&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">24&nbsp;-&nbsp;17</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">3-7</td>
+          <td class="center bold desktop ng-binding">负 2</td>
+          <td class="center bold desktop ng-binding">101.3</td>
+          <td class="center bold desktop ng-binding">102.5</td>
+          <td class="center bold desktop ng-binding">-1.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="10" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/hornets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hornets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->夏洛特&nbsp;黄蜂</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/hornets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/hornets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->黄蜂</a>
+          </td>
+          <td class="center bold ng-binding">36</td>
+          <td class="center bold ng-binding">46</td>
+          <td class="center bold desktop ng-binding">43.9</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">17</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">13</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">22&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">22&nbsp;-&nbsp;19</td>
+          <td class="center bold desktop ng-binding">14&nbsp;-&nbsp;27</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">负 5</td>
+          <td class="center bold desktop ng-binding">104.9</td>
+          <td class="center bold desktop ng-binding">104.7</td>
+          <td class="center bold desktop ng-binding">0.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="11" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./NYK_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/knicks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/knicks">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->纽约&nbsp;尼克斯</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/knicks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/knicks">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->尼克斯</a>
+          </td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold desktop ng-binding">37.8</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">22</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">22</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">22&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">5&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">12&nbsp;-&nbsp;29</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">104.3</td>
+          <td class="center bold desktop ng-binding">108</td>
+          <td class="center bold desktop ng-binding">-3.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="12" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">13</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ORL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/magic" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/magic">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->奥兰多&nbsp;魔术</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/magic" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/magic">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->魔术</a>
+          </td>
+          <td class="center bold ng-binding">29</td>
+          <td class="center bold ng-binding">53</td>
+          <td class="center bold desktop ng-binding">35.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">24</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">20</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">20&nbsp;-&nbsp;32</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">7&nbsp;-&nbsp;9</td>
+          <td class="center bold desktop ng-binding">16&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">3-7</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">101.1</td>
+          <td class="center bold desktop ng-binding">107.6</td>
+          <td class="center bold desktop ng-binding">-6.5</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="13" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">14</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./PHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/sixers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/sixers">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->费城&nbsp;76人</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/sixers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/sixers">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->76人</a>
+          </td>
+          <td class="center bold ng-binding">28</td>
+          <td class="center bold ng-binding">54</td>
+          <td class="center bold desktop ng-binding">34.1</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">25</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">25</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">19&nbsp;-&nbsp;33</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">7&nbsp;-&nbsp;9</td>
+          <td class="center bold desktop ng-binding">17&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding">11&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding">1-9</td>
+          <td class="center bold desktop ng-binding">负 8</td>
+          <td class="center bold desktop ng-binding">102.4</td>
+          <td class="center bold desktop ng-binding">108.1</td>
+          <td class="center bold desktop ng-binding">-5.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="14" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">15</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BKN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/nets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/nets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->布鲁克林&nbsp;篮网</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/nets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/nets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->篮网</a>
+          </td>
+          <td class="center bold ng-binding">20</td>
+          <td class="center bold ng-binding">62</td>
+          <td class="center bold desktop ng-binding">24.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">33</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">33</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">11&nbsp;-&nbsp;41</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">3&nbsp;-&nbsp;13</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">7&nbsp;-&nbsp;34</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 2</td>
+          <td class="center bold desktop ng-binding">105.8</td>
+          <td class="center bold desktop ng-binding">112.5</td>
+          <td class="center bold desktop ng-binding">-6.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page -->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="3" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="rank nobr center sorted asc" sort="" data-field="confRank" data-dir="-1" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th class="rank nobr center ng-hide" sort="" data-field="divRank" data-dir="-1" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th></th> <!-- Team Logo -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="0" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">01</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BOS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="1" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">02</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CLE_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="2" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">03</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./TOR_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="3" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">04</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./WAS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="4" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">05</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ATL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="5" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">06</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="6" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">07</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./IND_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="7" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">08</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="8" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">09</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="9" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DET_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="10" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./CHA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="11" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./NYK_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="12" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">13</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./ORL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="13" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">14</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./PHI_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="14" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">15</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./BKN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page -->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<!--[if !IE]>|xGv00|7c2e3b7e5884c3ed361e32c10e22e151<![endif]--><div stats-table-add-rows=""><!-- ngIf: visibleRows < totalRows --></div></nba-stat-table>
+        <br ng-repeat-end="" class="ng-scope"><!-- end ngRepeat: group in groups --><nba-stat-table ng-repeat-start="group in groups" rows="group.teams" data-title="西部" ai="grouping" options="options" template="standings/standings-overall" class="ng-scope ng-isolate-scope"><!-- ngIf: title --><div ng-if="title" class="nba-stat-table__caption ng-scope desktop" ng-class="{ desktop: ai===&#39;displayConference&#39; }">
+  <!-- ngIf: ai==='displayConference' --><img data-ng-src="/media/img/western_logo.png" alt="western" class="conference ng-scope" ng-if="ai===&#39;displayConference&#39;" src="./western_logo.png"><!-- end ngIf: ai==='displayConference' -->
+  <span class="ng-binding">西部</span><!-- ngIf: ai==='displayConference' --><span ng-if="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.CONF" class="ng-scope">联盟</span><!-- end ngIf: ai==='displayConference' -->
+</div><!-- end ngIf: title -->
+
+<div class="nba-stat-table" bindonce="">
+  <div class="nba-stat-table__overflow" data-fixed="3" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="rank nobr center sorted asc" sort="" data-field="confRank" data-dir="-1" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th class="rank nobr center ng-hide" sort="" data-field="divRank" data-dir="-1" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th></th> <!-- Team Logo -->
+          <th class="nobr player center desktop" sort="" data-field="city" data-dir="-1" data-ng-i18next="_stats.name" ripple="">姓名</th>
+          <th class="nobr teamabbr center mobile" sort="" data-field="displayAbbr" data-dir="-1" data-ng-i18next="_stats.name" ripple="">姓名</th>
+          <th class="nobr center" sort="" data-field="wins" data-ng-i18next="_stats.W" ripple="">胜</th>
+          <th class="nobr center" sort="" data-field="losses" data-ng-i18next="_stats.L" ripple="">负</th>
+          <th class="nobr center desktop" sort="" data-field="winPct" data-ng-i18next="_stats.PCT" ripple="">胜率</th>
+          <th class="nobr center" sort="" data-field="confGamesBehind" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.GB" ripple="">胜场差</th>
+          <th class="nobr center ng-hide" sort="" data-field="divGameBehind" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.GB" ripple="">胜场差</th>
+          <th class="nobr center desktop" data-field="confWin" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.CONF">联盟</th>
+          <th class="nobr center desktop ng-hide" data-field="divWin" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.DIV">分区</th>
+          <th class="nobr center desktop" data-field="homeWin" data-ng-i18next="leagueStandings.home">主场</th>
+          <th class="nobr center desktop" data-field="roadWin" data-ng-i18next="leagueStandings.road">客场</th>
+          <th class="nobr center desktop" data-field="last10" data-ng-i18next="leagueStandings.last10">最近10场</th>
+          <th class="nobr center desktop" data-field="streak" data-ng-i18next="leagueStandings.streak">连续成绩</th>
+          <th class="nobr center desktop" sort="" data-field="pointsFor" data-ng-i18next="_stats.pointsFor" ripple="">得分/场</th>
+          <th class="nobr center desktop" sort="" data-field="pointsAgainst" data-ng-i18next="_stats.PA" ripple="">场均失分</th>
+          <th class="nobr center desktop" sort="" data-field="pointsDiff" data-ng-i18next="_stats.DIFF" ripple="">差距</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="0" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">01</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./GSW_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/warriors" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/warriors">w&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->金州&nbsp;勇士</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/warriors" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/warriors">w&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->勇士</a>
+          </td>
+          <td class="center bold ng-binding">67</td>
+          <td class="center bold ng-binding">15</td>
+          <td class="center bold desktop ng-binding">81.7</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">0</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">42&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">14&nbsp;-&nbsp;2</td>
+          <td class="center bold desktop ng-binding">36&nbsp;-&nbsp;5</td>
+          <td class="center bold desktop ng-binding">31&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">9-1</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">115.9</td>
+          <td class="center bold desktop ng-binding">104.3</td>
+          <td class="center bold desktop ng-binding">11.6</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="1" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">02</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./SAS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/spurs" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/spurs">sw&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->圣安东尼奥&nbsp;马刺</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/spurs" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/spurs">sw&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->马刺</a>
+          </td>
+          <td class="center bold ng-binding">61</td>
+          <td class="center bold ng-binding">21</td>
+          <td class="center bold desktop ng-binding">74.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">6</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">36&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">11&nbsp;-&nbsp;5</td>
+          <td class="center bold desktop ng-binding">31&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">30&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 3</td>
+          <td class="center bold desktop ng-binding">105.3</td>
+          <td class="center bold desktop ng-binding">98.1</td>
+          <td class="center bold desktop ng-binding">7.2</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="2" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">03</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./HOU_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/rockets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/rockets">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->休斯顿&nbsp;火箭</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/rockets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/rockets">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->火箭</a>
+          </td>
+          <td class="center bold ng-binding">55</td>
+          <td class="center bold ng-binding">27</td>
+          <td class="center bold desktop ng-binding">67.1</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">36&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">30&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">25&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">115.3</td>
+          <td class="center bold desktop ng-binding">109.6</td>
+          <td class="center bold desktop ng-binding">5.7</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="3" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">04</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./LAC_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/clippers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/clippers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->洛杉矶&nbsp;快船</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/clippers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/clippers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->快船</a>
+          </td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold desktop ng-binding">62.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">16</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">16</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">31&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">29&nbsp;-&nbsp;12</td>
+          <td class="center bold desktop ng-binding">22&nbsp;-&nbsp;19</td>
+          <td class="center bold desktop ng-binding">8-2</td>
+          <td class="center bold desktop ng-binding">胜 7</td>
+          <td class="center bold desktop ng-binding">108.7</td>
+          <td class="center bold desktop ng-binding">104.4</td>
+          <td class="center bold desktop ng-binding">4.3</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="4" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">05</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./UTA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/jazz" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/jazz">nw&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->犹他&nbsp;爵士</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/jazz" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/jazz">nw&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->爵士</a>
+          </td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold desktop ng-binding">62.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">16</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">0</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">31&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">29&nbsp;-&nbsp;12</td>
+          <td class="center bold desktop ng-binding">22&nbsp;-&nbsp;19</td>
+          <td class="center bold desktop ng-binding">7-3</td>
+          <td class="center bold desktop ng-binding">胜 2</td>
+          <td class="center bold desktop ng-binding">100.7</td>
+          <td class="center bold desktop ng-binding">96.8</td>
+          <td class="center bold desktop ng-binding">3.9</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="5" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">06</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./OKC_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/thunder" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/thunder">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->俄克拉荷马城&nbsp;雷霆</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/thunder" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/thunder">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->雷霆</a>
+          </td>
+          <td class="center bold ng-binding">47</td>
+          <td class="center bold ng-binding">35</td>
+          <td class="center bold desktop ng-binding">57.3</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">20</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">4</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">29&nbsp;-&nbsp;23</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10&nbsp;-&nbsp;6</td>
+          <td class="center bold desktop ng-binding">28&nbsp;-&nbsp;13</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">6-4</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">106.6</td>
+          <td class="center bold desktop ng-binding">105.8</td>
+          <td class="center bold desktop ng-binding">0.8</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="6" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">07</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MEM_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/grizzlies" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/grizzlies">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->孟菲斯&nbsp;灰熊</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/grizzlies" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/grizzlies">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->灰熊</a>
+          </td>
+          <td class="center bold ng-binding">43</td>
+          <td class="center bold ng-binding">39</td>
+          <td class="center bold desktop ng-binding">52.4</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">24</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">18</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">28&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">8&nbsp;-&nbsp;8</td>
+          <td class="center bold desktop ng-binding">24&nbsp;-&nbsp;17</td>
+          <td class="center bold desktop ng-binding">19&nbsp;-&nbsp;22</td>
+          <td class="center bold desktop ng-binding">3-7</td>
+          <td class="center bold desktop ng-binding">负 2</td>
+          <td class="center bold desktop ng-binding">100.5</td>
+          <td class="center bold desktop ng-binding">100</td>
+          <td class="center bold desktop ng-binding">0.5</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="7" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">08</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./POR_logo(1).svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/blazers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/blazers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->波特兰&nbsp;开拓者</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/blazers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/blazers">x&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->开拓者</a>
+          </td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold ng-binding">41</td>
+          <td class="center bold desktop ng-binding">50</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">26</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">10</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">28&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">11&nbsp;-&nbsp;5</td>
+          <td class="center bold desktop ng-binding">25&nbsp;-&nbsp;16</td>
+          <td class="center bold desktop ng-binding">16&nbsp;-&nbsp;25</td>
+          <td class="center bold desktop ng-binding">7-3</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">107.9</td>
+          <td class="center bold desktop ng-binding">108.5</td>
+          <td class="center bold desktop ng-binding">-0.6</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="8" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">09</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DEN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/nuggets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/nuggets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->丹佛&nbsp;掘金</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/nuggets" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/nuggets">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->掘金</a>
+          </td>
+          <td class="center bold ng-binding">40</td>
+          <td class="center bold ng-binding">42</td>
+          <td class="center bold desktop ng-binding">48.8</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">27</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">11</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">24&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">22&nbsp;-&nbsp;19</td>
+          <td class="center bold desktop ng-binding">18&nbsp;-&nbsp;23</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">胜 2</td>
+          <td class="center bold desktop ng-binding">111.7</td>
+          <td class="center bold desktop ng-binding">111.2</td>
+          <td class="center bold desktop ng-binding">0.5</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="9" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./NOP_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/pelicans" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pelicans">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->新奥尔良&nbsp;鹈鹕</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/pelicans" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/pelicans">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->鹈鹕</a>
+          </td>
+          <td class="center bold ng-binding">34</td>
+          <td class="center bold ng-binding">48</td>
+          <td class="center bold desktop ng-binding">41.5</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">33</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">27</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">20&nbsp;-&nbsp;32</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">21&nbsp;-&nbsp;20</td>
+          <td class="center bold desktop ng-binding">13&nbsp;-&nbsp;28</td>
+          <td class="center bold desktop ng-binding">4-6</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">104.3</td>
+          <td class="center bold desktop ng-binding">106.4</td>
+          <td class="center bold desktop ng-binding">-2.1</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="10" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DAL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/mavericks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/mavericks">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->达拉斯&nbsp;小牛</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/mavericks" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/mavericks">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->小牛</a>
+          </td>
+          <td class="center bold ng-binding">33</td>
+          <td class="center bold ng-binding">49</td>
+          <td class="center bold desktop ng-binding">40.2</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">34</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">28</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">19&nbsp;-&nbsp;33</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">5&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">21&nbsp;-&nbsp;20</td>
+          <td class="center bold desktop ng-binding">12&nbsp;-&nbsp;29</td>
+          <td class="center bold desktop ng-binding">2-8</td>
+          <td class="center bold desktop ng-binding">胜 1</td>
+          <td class="center bold desktop ng-binding">97.9</td>
+          <td class="center bold desktop ng-binding">100.8</td>
+          <td class="center bold desktop ng-binding">-2.9</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="11" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./SAC_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/kings" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/kings">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->萨克拉门托&nbsp;国王</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/kings" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/kings">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->国王</a>
+          </td>
+          <td class="center bold ng-binding">32</td>
+          <td class="center bold ng-binding">50</td>
+          <td class="center bold desktop ng-binding">39</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">35</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">35</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">21&nbsp;-&nbsp;31</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">7&nbsp;-&nbsp;9</td>
+          <td class="center bold desktop ng-binding">17&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding">15&nbsp;-&nbsp;26</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">102.8</td>
+          <td class="center bold desktop ng-binding">106.7</td>
+          <td class="center bold desktop ng-binding">-3.9</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="12" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">13</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/timberwolves" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/timberwolves">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->明尼苏达&nbsp;森林狼</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/timberwolves" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/timberwolves">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->森林狼</a>
+          </td>
+          <td class="center bold ng-binding">31</td>
+          <td class="center bold ng-binding">51</td>
+          <td class="center bold desktop ng-binding">37.8</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">36</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">20</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">18&nbsp;-&nbsp;34</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">5&nbsp;-&nbsp;11</td>
+          <td class="center bold desktop ng-binding">20&nbsp;-&nbsp;21</td>
+          <td class="center bold desktop ng-binding">11&nbsp;-&nbsp;30</td>
+          <td class="center bold desktop ng-binding">3-7</td>
+          <td class="center bold desktop ng-binding">负 6</td>
+          <td class="center bold desktop ng-binding">105.6</td>
+          <td class="center bold desktop ng-binding">106.7</td>
+          <td class="center bold desktop ng-binding">-1.1</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="13" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">14</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./LAL_logo(1).svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/lakers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/lakers">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->洛杉矶&nbsp;湖人</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/lakers" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/lakers">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->湖人</a>
+          </td>
+          <td class="center bold ng-binding">26</td>
+          <td class="center bold ng-binding">56</td>
+          <td class="center bold desktop ng-binding">31.7</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">41</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">41</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">16&nbsp;-&nbsp;36</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">6&nbsp;-&nbsp;10</td>
+          <td class="center bold desktop ng-binding">17&nbsp;-&nbsp;24</td>
+          <td class="center bold desktop ng-binding">9&nbsp;-&nbsp;32</td>
+          <td class="center bold desktop ng-binding">5-5</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">104.6</td>
+          <td class="center bold desktop ng-binding">111.5</td>
+          <td class="center bold desktop ng-binding">-6.9</td>
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="14" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">15</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./PHX_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          <td class="player desktop">
+            <a data-ng-href="/teams/#!/suns" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/suns">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->菲尼克斯&nbsp;太阳</a>
+          </td>
+          <td class="left teamabbr mobile">
+            <a data-ng-href="/teams/#!/suns" class="ng-binding" target="_parent" href="http://china.nba.com/teams/#!/suns">o&nbsp;<!-- ngIf: row.clinched --><span ng-if="row.clinched" class="ng-scope">-&nbsp;</span><!-- end ngIf: row.clinched -->太阳</a>
+          </td>
+          <td class="center bold ng-binding">24</td>
+          <td class="center bold ng-binding">58</td>
+          <td class="center bold desktop ng-binding">29.3</td>
+          <td class="center bold ng-binding" ng-show="ai===&#39;displayConference&#39;">43</td>
+          <td class="center bold ng-binding ng-hide" ng-show="ai===&#39;division&#39;">43</td>
+          <td class="center bold desktop ng-binding" ng-show="ai===&#39;displayConference&#39;">11&nbsp;-&nbsp;41</td>
+          <td class="center bold desktop ng-binding ng-hide" ng-show="ai===&#39;division&#39;">3&nbsp;-&nbsp;13</td>
+          <td class="center bold desktop ng-binding">15&nbsp;-&nbsp;26</td>
+          <td class="center bold desktop ng-binding">9&nbsp;-&nbsp;32</td>
+          <td class="center bold desktop ng-binding">2-8</td>
+          <td class="center bold desktop ng-binding">负 1</td>
+          <td class="center bold desktop ng-binding">107.7</td>
+          <td class="center bold desktop ng-binding">113.3</td>
+          <td class="center bold desktop ng-binding">-5.6</td>
+        </tr><!-- end ngRepeat: (i, row) in page -->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="3" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="rank nobr center sorted asc" sort="" data-field="confRank" data-dir="-1" ng-show="ai===&#39;displayConference&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th class="rank nobr center ng-hide" sort="" data-field="divRank" data-dir="-1" ng-show="ai===&#39;division&#39;" data-ng-i18next="_stats.rank" ripple="">排名</th>
+          <th></th> <!-- Team Logo -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="0" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">01</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./GSW_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="1" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">02</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./SAS_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="2" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">03</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./HOU_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="3" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">04</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./LAC_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="4" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">05</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">01</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./UTA_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="5" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">06</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">02</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./OKC_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="6" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">07</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MEM_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="7" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">08</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./POR_logo(1).svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="8" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">09</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DEN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="9" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">10</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./NOP_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="10" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">11</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./DAL_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="11" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">12</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">03</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./SAC_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="12" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">13</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./MIN_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="13" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">14</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">04</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./LAL_logo(1).svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page --><tr data-ng-repeat="(i, row) in page" index="14" class="ng-scope">
+          <td class="rank nobr bold center ng-binding sorted" ng-show="ai===&#39;displayConference&#39;">15</td>
+          <td class="rank nobr bold center ng-binding ng-hide" ng-show="ai===&#39;division&#39;">05</td>
+          <td class="center team-logo"><sib-img-team team-abbr="row.abbr" class="ng-isolate-scope"><img class="team-img" src="./PHX_logo.svg" type="image/svg+xml"></sib-img-team></td>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr><!-- end ngRepeat: (i, row) in page -->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<!--[if !IE]>|xGv00|7c2e3b7e5884c3ed361e32c10e22e151<![endif]--><div stats-table-add-rows=""><!-- ngIf: visibleRows < totalRows --></div></nba-stat-table>
+        <br ng-repeat-end="" class="ng-scope"><!-- end ngRepeat: group in groups -->
+    </div><!-- end ngIf: columnSet==='standings' && !loading -->
+
+    <!-- ngIf: columnSet==='streaks' && !loading -->
+
+    <!-- ngIf: columnSet==='margin' && !loading -->
+
+    <!-- ngIf: columnSet==='ahead' && !loading -->
+  </div>
+</div>
+<!-- Table End -->    </div>
+  </div>
+  
+  <div class="row">
+    <div>
+      <!-- Standings Glossary Module Start -->
+<div class="sib-standings-glossary ng-scope" data-ng-controller="StandingsGlossaryCtrl">
+  <div class="playoff-legend">
+    <ul class="playoff-legend-row col-6 col-sm-12">
+      <li>
+        <span class="legend-icon">x</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedPlayoffsBerth">取得季后赛资格</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">e</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedEasternConference">取得东部季后赛资格</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">a</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedAtlanticDivision">取得大西洋赛区冠军</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">c</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedCentralDivision">取得中部赛区季后赛资格</span></span>
+      </li>
+    </ul>
+    <ul class="playoff-legend-row col-6 col-sm-12">
+      <li>
+        <span class="legend-icon">se</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedSoutheastDivision">取得东南赛区季后赛资格</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">w</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedWesternConference">取得西部季后赛资格</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">sw</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedSouthwestDivision">取得西南赛区季后赛资格</span></span>
+      </li>
+    </ul>
+    <ul class="playoff-legend-row col-12">
+      <li>
+        <span class="legend-icon">nw</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedNorthwestDivision">取得西北赛区季后赛资格</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">p</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.clinchedPacificDivision">取得太平洋赛区季后赛资格</span></span>
+      </li>
+      <li>
+        <span class="legend-icon">o</span> <span class="legend-type"> - <span data-ng-i18next="standingsGlossary.eliminatedFromPlayoffs">退出季后赛争夺</span></span>
+      </li>
+    </ul>
+    <!--<span class="rank-clinched-division">Clinched Division Title </span> 
+    <span class="rank-clinched-playoff">Clinched Playoff Berth </span> 
+    <span class="rank-eliminated">Eliminated from Playoffs </span> -->
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  
+  <h5 class="playoff-info-toggle desktop" data-ng-click="playoffinfo()"><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerTwo">季后赛最终排名决定程序</span>: <i class="icon-caret-down" data-ng-show="playoff==&#39;hidden&#39;"></i><i class="icon-caret-up ng-hide" data-ng-show="playoff==&#39;expanded&#39;"></i></h5>
+  <div class="tie-break ng-hide" data-ng-show="playoff==&#39;expanded&#39;">
+    <p><span data-ng-i18next="standingsGlossary.tiebreakerBasis.paragraphOne">东西部的前四名将由3个分赛区的冠军和成绩最好的分区第2名组成，而这4支球队的排名将由各自的战绩决定，成绩最好的球队排在第1位，以此类推。东西部的5-8名则将由剩下球队中成绩最好的4支球队按照战绩进行排名（如果出现战绩相同的情况，请见下面的排名方法）</span></p>
+    <p><span data-ng-i18next="standingsGlossary.tiebreakerBasis.paragraphTwo">常规赛成绩相同致使季后赛排位相同（包括分赛区冠军），会根据以下条件确定排名：若两支球队战绩相同，根据a的排名原则确定排名；若超过两支球队， 则使用b排名原则。判断球队季后赛排名方法细则详见</span></p>
+    <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerThree">a. 当两支球队出现战绩相同的情况时</span></h6>
+    <ol>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineNine">两支之间的胜负关系</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTen">对阵相同赛区球队的成绩</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineEleven">对阵相同联盟球队的成绩</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwelve">对阵相同赛区有资格进入季后赛球队的成绩（包括常规赛成绩与进入季后赛球队战绩相同的球队）</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineThirteen">对阵不同赛区有资格进入季后赛球队的成绩（包括常规赛成绩与进入季后赛球队战绩相同的球队）</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineFourteen">所有比赛的净胜分</span></li>
+    </ol>
+      
+    <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerFour">b. 当多支球队（超过两支）出现战绩相同的情况时</span></h6>
+    <ol>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineFifteen">多支球队之间的胜负关系</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineSixteen">对阵相同赛区球队的成绩</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineSeventeen">对阵相同联盟球队的成绩</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineEighteen">对阵相同赛区有资格进入季后赛球队的成绩 （包括常规赛成绩与进入季后赛球队战绩相同的球队）</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineNineteen">所有比赛的净胜分</span></li>
+    </ol>
+      
+    <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerFive">c. 判断球队季后赛排名方法细则</span></h6>
+    <ol>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwenty">a. 由于三个分区的冠军自动进入季后赛排位的前4名，所以在进行其它球队间排位顺序的判断前，必须先完成对于分区冠军的判断b. 当两支球队间出现战绩相同的情况时，排名规则只能用来决定分区冠军的归属以及其在季后赛中的排位，并不能决定另一支球队的排名</span></li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyOne">当有超过两支球队出现战绩相同的情况时，将使用适用于多支球队的排名规则由上之下进行判断直到出现:</span>
+          <ul class="list-unstyled">
+            <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyTwo">a. 每一支球队的成绩都不相同（比如多支球队对分区球队的成绩还相同时，将继续比较对各自赛区球队的成绩，直到分出不同）。这时，成绩最好的（或是净胜分最高的）球队将获得多支球队中最好的季后赛排名。成绩第2好（或是净胜分第2高的）球队将获得第2好的季后赛排名，依此类推</span></li>
+            <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyThree">或者</span></li>
+            <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyFour">b. 当出现有一支或者多于一支球队的成绩好于其它球队时（与a的判断标准相同，但不用是所有球队都分出成绩好坏），这些球队将按照成绩的好坏分出排名的先后。剩余仍未分出成绩好坏的球队将再按照两支或者多支球队的排位规则由上之下进行判断，直至所有球队都分出排名先后c</span></li>
+          </ul>
+      </li>
+      <li><span data-ng-i18next="standingsGlossary.tiebreakerBasis.lineTwentyFive">如果(a)和(b)两项还不足以判断球队间的排名先后时，最终的排名结果将由随机的方法决定</span></li>
+    </ol>
+    
+    <h6><span data-ng-i18next="standingsGlossary.tiebreakerBasis.headerSix">d. 主场优势:</span></h6>
+    <p><span data-ng-i18next="standingsGlossary.tiebreakerBasis.paragraphThree">对于两支球队间主场优势的归属问题，将按照两支球队出现战绩相同情况时，季后赛排位顺序的决定方法进行判断</span></p>
+      
+  </div>
+</div>
+<!-- Standings Glossary Module End -->    </div>
+  </div>
+</section>
+    <!-- End Widget -->
+  </div>
+</div>
+<!-- .widget-container -->
+<!--[if !IE]>|xGv00|a3def84e1c28f24c48b65789032249f8<![endif]-->        <!-- End widget-content -->
+        
+      </div> <!-- /container -->
+    </div> <!-- /app-container -->
+    <script>
+    // IE console.log fix
+    if (!window.console) {
+      console = {log: function() {}};
+    }
+    </script>
+
+      
+    <script src="./libs.min.js(1).下载"></script>
+    <script src="./custom.min.js(1).下载"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/scripts/lib/json3.min.js"></script>
+      <script src="/scripts/lib/ieshiv.js"></script>
+    <![endif]-->
+            
+                                           
+     <!--SSI /frags/licensee_widget_scripts_footer.html -->
+<script type="text/javascript">
+  angular.element('a').attr('target','_parent');
+</script>
+<style>
+body {
+  background-image:none !important;
+}
+</style><!--[if !IE]>|xGv00|0beadd0cff7796ec412f959b040d7fe2<![endif]-->   
+  
+</body></html>

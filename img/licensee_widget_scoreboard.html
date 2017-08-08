@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html -->
+<html xmlns:ng="http://angularjs.org" lang="en" class=" js svg inlinesvg svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+     <!-- Font face import -->
+    <link href="./fontface.css" rel="stylesheet">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title></title>
+    <link href="./libs.min.css" rel="stylesheet">
+    <link href="./custom.min.css" rel="stylesheet">
+	  <!--SSI /frags/licensee_scripts_header.html -->
+	  <!-- start licensee_widget_scripts_header  -->
+
+
+<!-- end licensee_widget_scripts_header  --><!--[if !IE]>|xGv00|7b93ab1228e4222502f06a0e3c1644db<![endif]-->
+	
+    <!--[if IE]>
+      <link href="/styles/libs/font-awesome-ie7.min.css" rel="stylesheet">
+      
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      
+      <script src="/scripts/libs/es5-shim.min.js"></script>
+      <script src="/scripts/libs/es5-sham.min.js"></script>
+
+      <script>
+        document.createElement('sib-bar-chart');
+        document.createElement('sib-bar');
+        document.createElement('sib-fallback-src');
+        document.createElement('sib-hotzone-chart');
+        document.createElement('sib-img-player');
+        document.createElement('sib-img-team');
+        document.createElement('sib-playoff-scoreboard-slider');
+        document.createElement('sib-scoreboard-date');
+        document.createElement('sib-scoreboard-slider');
+        document.createElement('sib-social-icons');
+        document.createElement('sib-calendar');
+        document.createElement('sib-scores-calendar');
+        document.createElement('sib-team-twitter');
+        document.createElement('sib-playoff-bracket');
+        document.createElement('ng-pluralize');
+      </script>
+      <style>
+        .sib-table-container select {
+          background-image: none !important;
+        }
+        #player-index-search-label {
+          display: inline !important;
+        }
+        .sib-scoreboard .scoreboard .page .game .teams:hover .overlay{ display:block; }
+      </style>
+    <![endif]-->
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {  display: none !important; }
+      .wf-loading { border-top: 0px solid #ffffff; }      
+    </style>  
+  </head>
+  <body data-ng-app="sib" id="ng:app" class="ng-app:sib ng-scope" style="">
+    <div data-ng-show="loading &amp;&amp; !errors.length" class="preloader ng-hide" style="">
+        <img src="./loader.gif"><br>
+    </div>
+    <div id="app-container" class="" data-ng-hide="loading" style="">
+      <div class="widget-container-outer" id="widget-container-outer">
+
+        <!-- Start widget-content -->
+         <style type="text/css">
+ #widget-scoreboard > .row { margin: 0px 5px; }
+</style>
+
+<!--SSI /widget/include/scoreboard/index.html -->
+<div class="widget-container ng-isolate-scope" sib-iframe-notice="">
+  
+  <div class="" data-ng-hide="loading" style="">
+    <!-- Start Widget -->
+    <div id="widget-scoreboard" style="overflow: hidden">
+  <div data-ng-controller="HomePageScoreboardSwitchCtrl" class="ng-scope">
+      <section class="col-12 sib-dp-sb n-p-xs ng-scope" ng-controller="ScoreboardController">
+	<div class="sib-dp-sb__wrapper ng-isolate-scope" sib-sticky-element="false" element-classes="sib-dp-sb__sticky,col-12,container" offset-element="fixed-header" background-element="sib-dp-sb__bg" additional-offset="10" breakpoint="768">
+
+		<div class="sib-dp-sb__bg"></div>
+
+		<!-- DATEPICKER -->
+		<div class="datepicker">
+			<!-- DATE DROPDOWN -->
+			<div class="datepicker-selector hidden-sm">
+				<div href="" class="datepicker-selector__button datepicker-selector__button-toggle">
+					<a href="http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html" ng-class="{ disabled: isFirstDay() }" ng-click="changeDay(selected, -1)" target="_parent"><i class="icon-angle-left" aria-hidden="true"></i></a>
+					<div>
+						<span class="ng-binding">7月 18日</span>
+						<span class="ng-binding">星期二</span>
+					</div>
+					<a href="http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html" ng-class="{ disabled: isLastDay() }" ng-click="changeDay(selected, 1)" target="_parent" class="disabled"><i class="icon-angle-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<!-- END: DATE DROPDOWN -->
+
+		 	<!-- DATE DISPLAY -->
+			<div class="datepicker-display hidden-sm ng-binding">1&nbsp;场比赛</div>
+			<!-- END: DATE DISPLAY -->
+
+			<div class="datepicker-next">
+				<a href="http://lasvegas.china.nba.com/schedule/#!/7" class="datepicker-next__button datepicker-next__button-advance hidden-sm ng-binding" ng-click="changeDay(selected.key, 1)" target="_parent">全部赛程</a>
+
+				<!-- MOBILE NAV ARROWS -->
+				<div class="datepicker-next__mobile-wrapper visible-sm">
+					<a href="http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html" class="datepicker-next__button datepicker-next__button-left" ng-class="{ disabled: isFirstDay() }" ng-click="changeDay(selected, -1)" target="_parent"><i class="icon-angle-left" aria-hidden="true"></i></a>
+
+					<!-- DATE DISPLAY -->
+					<div class="datepicker-next__date ng-binding"> 7月 18日 星期二 &nbsp;(1&nbsp;场比赛)</div>
+					<!-- END: DATE DISPLAY -->
+
+					<a href="http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html" class="datepicker-next__button datepicker-next__button-right disabled" ng-class="{ disabled: isLastDay() }" ng-click="changeDay(selected, 1)" target="_parent"><i class="icon-angle-right" aria-hidden="true"></i></a>
+				</div>
+				<!-- END: MOBILE NAV ARROWS -->
+			</div>
+
+		</div>
+		<!-- END: DATEPICKER -->
+
+		<!-- SCOREBOARD -->
+		<div class="scoreboard-container">
+			<div class="scoreboard">
+
+				<!-- GAME WRAPPER -->
+				<div scroll-listener="" item-width="230" watch-var="games.length" item-delay="1000" breakpoint="768" class="ng-isolate-scope"><a href="http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html" class="arrow-button arrow-button__left empty" ng-class="{ empty: scrollLeft===0, full: scrollLeft&gt;0 }" ng-click="navPrev($event)"> <span><i class="icon-angle-left" aria-hidden="true"></i></span></a><a href="http://lasvegas.china.nba.com/articles/licensee_widget_scoreboard.html" class="arrow-button arrow-button__right empty" ng-class="{ empty: scrollLeft===scrollLeftMax, full: scrollLeft&lt;scrollLeftMax }" ng-click="navNext($event)"> <span><i class="icon-angle-right" aria-hidden="true"></i></span></a><div class="overflow-container scroll-element ng-isolate-scope" scroll-left="scrollMax">	<ng-transclude>
+					<!-- LOADING GIF -->
+					<!-- ngIf: loading -->
+					<!-- END: LOADING GIF -->
+
+					<!-- GAME -->
+					<!-- ngRepeat: game in games | orderBy: ['displayOrder', 'time', 'sequence'] --><!-- ngIf: !loading --><div class="scoreboard-games__game m-t ng-scope m-l m-r m-b" ng-repeat="game in games | orderBy: [&#39;displayOrder&#39;, &#39;time&#39;, &#39;sequence&#39;]" ng-class="{ &#39;m-l&#39;: $first, &#39;m-r&#39;: $last, &#39;m-b&#39;: $last }" ng-if="!loading" gameid="1521700067" style="">
+
+						<div class="scoreboard-games__game--top" ng-click="showLinks($index)">
+
+							<div class="scoreboard-games__game--broadcast">
+								<sib-broadcaster-urls broadcasters="game.broadcasters" class="ng-isolate-scope"><span class="broadcasters-list"><!-- ngRepeat: broadcaster in broadcasters --></span></sib-broadcaster-urls>
+								<!-- ngRepeat: name in game.urlBroadcasters -->
+							</div>
+							
+							<div class="scoreboard-games__game--wrapper">
+								
+								<!-- AWAY TEAM -->
+								<div class="scoreboard-games__game--vtm">
+									<div class="scoreboard-games__game--vtm-logo">
+										<sib-img-team team-abbr="game.awayTeam.profile.abbr" class="ng-isolate-scope"><img class="team-img" src="./POR_logo.svg" type="image/svg+xml"></sib-img-team>
+									</div>
+									<div class="scoreboard-games__game--vtm-abbr ng-binding">开拓者</div>
+									<div class="scoreboard-games__game--vtm-record ng-binding">5-3</div>
+								</div>
+								<!-- END: AWAY TEAM -->
+								
+								<!-- BOXSCORE -->
+								<div class="scoreboard-games__game--boxscore">
+									<!-- ngIf: game.boxscore.status!=='1' --><div class="scoreboard-games__game--boxscore-scores ng-scope" ng-if="game.boxscore.status!==&#39;1&#39;" ng-class="{ live: game.boxscore.status===&#39;2&#39; }">
+										<span class="scoreboard-games__game--boxscore-vtm ng-binding loser" ng-class="{ winner: (game.boxscore.awayScore &gt; game.boxscore.homeScore) &amp;&amp; game.boxscore.status===&#39;3&#39;, loser: (game.boxscore.awayScore &lt; game.boxscore.homeScore) &amp;&amp; game.boxscore.status===&#39;3&#39; }">98</span>
+										<span class="scoreboard-games__game--boxscore-dash desktop">-</span>
+										<span class="scoreboard-games__game--boxscore-status mobile" ng-class="{ live: game.boxscore.status===&#39;2&#39; }">
+											<span class="bold ng-binding" data-ng-show="!game.boxscore.periodClock">结束</span>
+											<!-- <span data-ng-show="game.boxscore.periodClock && game.boxscore.status == '2'" data-ng-i18next="miniGameSnapshot.status.live"></span> -->
+											<span data-ng-show="game.boxscore.periodClock &amp;&amp; game.boxscore.period &lt; 5 &amp;&amp; game.boxscore.status == &#39;2&#39;" class="ng-hide"><span class="period" data-ng-i18next="[i18next]({period:4})homepageScoreboard.q">第4节</span>&nbsp;<span class="period-clock ng-binding">&nbsp;</span></span>
+											<span data-ng-show="game.boxscore.periodClock &amp;&amp; game.boxscore.period &gt; 4 &amp;&amp; game.boxscore.status == &#39;2&#39;" class="ng-hide"><span class="period" data-ng-i18next="[i18next]({overtime:0})homepageScoreboard.ot">加时0</span>&nbsp;<span class="period-clock ng-binding">&nbsp;</span></span>
+										</span>
+										<span class="scoreboard-games__game--boxscore-htm ng-binding winner" ng-class="{ winner: (game.boxscore.homeScore &gt; game.boxscore.awayScore) &amp;&amp; game.boxscore.status===&#39;3&#39;, loser: (game.boxscore.homeScore &lt; game.boxscore.awayScore) &amp;&amp; game.boxscore.status===&#39;3&#39; }">110</span>
+									</div><!-- end ngIf: game.boxscore.status!=='1' -->
+
+									<!-- ngIf: game.buzzerBeater -->
+
+									<!-- ngIf: game.boxscore.status==='1' -->
+
+									<div class="scoreboard-games__game--boxscore-status desktop" ng-class="{ live: game.boxscore.status===&#39;2&#39; }">
+										<span class="bold ng-binding" data-ng-show="!game.boxscore.periodClock &amp;&amp; game.boxscore.status !== &#39;1&#39;">结束</span>
+										<span data-ng-show="game.boxscore.periodClock &amp;&amp; game.boxscore.status == &#39;2&#39;" data-ng-i18next="miniGameSnapshot.status.live" class="period ng-hide">直播</span>
+										<span data-ng-show="game.boxscore.periodClock &amp;&amp; game.boxscore.period &lt; 5 &amp;&amp; game.boxscore.status == &#39;2&#39;" class="ng-hide"><span class="period" data-ng-i18next="[i18next]({period:4})homepageScoreboard.q">第4节</span>&nbsp;<span class="period-clock ng-binding">&nbsp;</span></span>
+										<span data-ng-show="game.boxscore.periodClock &amp;&amp; game.boxscore.period &gt; 4 &amp;&amp; game.boxscore.status == &#39;2&#39;" class="ng-hide"><span class="period" data-ng-i18next="[i18next]({overtime:0})homepageScoreboard.ot">加时0</span>&nbsp;<span class="period-clock ng-binding">&nbsp;</span></span>
+									</div>
+
+									<div class="scoreboard-games__game--boxscore-matchup ng-binding"></div>
+
+									<div class="scoreboard-games__game--links mobile" ng-class="{ &#39;mobile-overlay&#39;: activeLinkIndex===$index }">
+										<sib3-game-urls game="game" types="live,leaguepass,stats-boxscore,stats-preview,stats-playbyplay,highlights" class="url-buttons ng-isolate-scope"><div class="sib3-game-urls game-1521700067 url-count-2"><!-- ngRepeat: url in urls | orderBy : 'sequence' --><a bindonce="" data-ng-repeat="url in urls | orderBy : &#39;sequence&#39;" bo-href="url.value" target="_parent" class="sib3-game-url stats-boxscore game-status-3" href="http://lasvegas.china.nba.com/boxscore/#!/1521700067"><span class="stats-boxscore-icon url-icon"></span><span class="ng-binding">技术统计</span> </a><!-- end ngRepeat: url in urls | orderBy : 'sequence' --><a bindonce="" data-ng-repeat="url in urls | orderBy : &#39;sequence&#39;" bo-href="url.value" target="_parent" class="sib3-game-url stats-playbyplay game-status-3" href="http://lasvegas.china.nba.com/boxscore/playbyplay/#!/1521700067"><span class="stats-playbyplay-icon url-icon"></span><span class="ng-binding">文字直播</span> </a><!-- end ngRepeat: url in urls | orderBy : 'sequence' --></div></sib3-game-urls></div>
+
+								</div>
+								<!-- END: BOXSCORE -->
+
+								<!-- HOME TEAM -->
+								<div class="scoreboard-games__game--htm">
+									<div class="scoreboard-games__game--htm-logo">
+										<sib-img-team team-abbr="game.homeTeam.profile.abbr" class="ng-isolate-scope"><img class="team-img" src="./LAL_logo.svg" type="image/svg+xml"></sib-img-team>
+									</div>
+									<div class="scoreboard-games__game--htm-abbr ng-binding">湖人</div>
+									<div class="scoreboard-games__game--htm-record ng-binding">6-2</div>
+								</div>
+								<!-- END HOME TEAM -->
+
+							</div>
+
+							<!-- HOVER LINK -->
+							<div class="scoreboard-games__game--links">
+								<sib3-game-urls game="game" types="live,leaguepass,stats-boxscore,stats-preview,stats-playbyplay,highlights" class="ng-isolate-scope"><div class="sib3-game-urls game-1521700067 url-count-2"><!-- ngRepeat: url in urls | orderBy : 'sequence' --><a bindonce="" data-ng-repeat="url in urls | orderBy : &#39;sequence&#39;" bo-href="url.value" target="_parent" class="sib3-game-url stats-boxscore game-status-3" href="http://lasvegas.china.nba.com/boxscore/#!/1521700067"><span class="stats-boxscore-icon url-icon"></span><span class="ng-binding">技术统计</span> </a><!-- end ngRepeat: url in urls | orderBy : 'sequence' --><a bindonce="" data-ng-repeat="url in urls | orderBy : &#39;sequence&#39;" bo-href="url.value" target="_parent" class="sib3-game-url stats-playbyplay game-status-3" href="http://lasvegas.china.nba.com/boxscore/playbyplay/#!/1521700067"><span class="stats-playbyplay-icon url-icon"></span><span class="ng-binding">文字直播</span> </a><!-- end ngRepeat: url in urls | orderBy : 'sequence' --></div></sib3-game-urls></div>
+							<!-- END HOME TEAM -->
+
+						</div>
+
+						<!-- VIDEO LINKS -->
+						<div class="scoreboard-games__game--bot">
+							<!-- ngIf: game.buzzerBeater -->
+							<div class="scoreboard-games__game--bot-links">
+								<sib3-game-urls game="game" types="live,leaguepass,stats-boxscore,stats-preview,highlights" class="url-buttons dark-theme ng-isolate-scope"><div class="sib3-game-urls game-1521700067 url-count-1"><!-- ngRepeat: url in urls | orderBy : 'sequence' --><a bindonce="" data-ng-repeat="url in urls | orderBy : &#39;sequence&#39;" bo-href="url.value" target="_parent" class="sib3-game-url stats-boxscore game-status-3" href="http://lasvegas.china.nba.com/boxscore/#!/1521700067"><span class="stats-boxscore-icon url-icon"></span><span class="ng-binding">技术统计</span> </a><!-- end ngRepeat: url in urls | orderBy : 'sequence' --></div></sib3-game-urls></div>
+						</div>
+						<!-- END: VIDEO LINKS -->
+
+					</div><!-- end ngIf: !loading --><!-- end ngRepeat: game in games | orderBy: ['displayOrder', 'time', 'sequence'] -->
+					<!-- END: GAME -->
+
+					<!-- NO GAMES -->
+					<!-- ngIf: games.length===0 && !loading -->
+					<!-- END: NO GAMES -->
+
+				</ng-transclude></div></div>
+				<!-- END: GAME WRAPPER -->
+
+			</div>
+		</div>
+		<!-- END: SCOREBOARD -->
+
+	</div>
+</section>
+  </div>
+</div>
+
+    <!-- End Widget -->
+  </div>
+</div>
+<!-- .widget-container -->
+<!--[if !IE]>|xGv00|2675014c9f44b55a4f0ec0de6ba9b3da<![endif]-->        <!-- End widget-content -->
+        
+      </div> <!-- /container -->
+    </div> <!-- /app-container -->
+    <script>
+    // IE console.log fix
+    if (!window.console) {
+      console = {log: function() {}};
+    }
+    </script>
+
+      
+    <script src="./libs.min.js.下载"></script>
+    <script src="./custom.min.js.下载"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/scripts/lib/json3.min.js"></script>
+      <script src="/scripts/lib/ieshiv.js"></script>
+    <![endif]-->
+            
+                                           
+     <!--SSI /frags/licensee_widget_scripts_footer.html -->
+<script type="text/javascript">
+  angular.element('a').attr('target','_parent');
+</script>
+<style>
+body {
+  background-image:none !important;
+}
+</style><!--[if !IE]>|xGv00|0beadd0cff7796ec412f959b040d7fe2<![endif]-->   
+  
+</body></html>
